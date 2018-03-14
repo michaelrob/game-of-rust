@@ -1,0 +1,10 @@
+[package]
+name = "game-of-life"
+version = "0.1.0"
+authors = ["Michael Robinson <seraph890@gmail.com>"]
+
+[[bin]]
+name = "game_of_life"
+
+[dependencies]
+sdl2 = "0.31.0"
