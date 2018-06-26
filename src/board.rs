@@ -1,25 +1,26 @@
 pub struct Board {
-    height: usize,
-    width: usize,
+    pub height: usize,
+    pub width: usize,
 }
 
 impl Board {
-  pub fn new() -> Board {
-    Board { height: usize, width: usize }
-  }
+    pub fn new(width: usize, height: usize) -> Board {
+        Board { width: width, height: height
+        }
+    }
 
-  fn build() {
+    fn build() {
 
-  }
+    }
 
-  fn get_cell(&self, position: &Place) -> Option<Cell> {
-  }
+    // fn get_cell(&self, position: &Place) -> Option<Cell> {
+    // }
 
-  fn has_cell(&self, position: &Place) -> bool {
-  }
+    // fn has_cell(&self, position: &Place) -> bool {
+    // }
 }
 
-fn count_neighbours(cells: &Vec<Cell>, position: &Place) -> usize {
+/* fn count_neighbours(cells: &Vec<Cell>, position: &Place) -> usize {
     let mut neighbours = 0;
 
     for cell in cells {
@@ -35,4 +36,4 @@ fn count_neighbours(cells: &Vec<Cell>, position: &Place) -> usize {
     }
 
     neighbours
-}
+}*/

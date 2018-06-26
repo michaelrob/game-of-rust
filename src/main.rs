@@ -5,12 +5,22 @@ use sdl2::rect::{Rect};
 use sdl2::event::{Event};
 use sdl2::keyboard::Keycode;
 
+mod board;
+mod cell;
+
 fn main() {
   let ctx = sdl2::init().unwrap();
   let video_ctx = ctx.video().unwrap();
+  let width = 640;
+  let height = 480;
+
+  let board = board::Board {
+      height: 640,
+      width: 480,
+  };
 
   let window  = match video_ctx
-      .window("rust_to_js", 640, 480)
+      .window("Game of Rust", width, height)
       .position_centered()
       .opengl()
       .build() {
@@ -26,7 +36,6 @@ fn main() {
       };
 
   let rect = Rect::new(10, 10, 10, 10);
-
   let black = sdl2::pixels::Color::RGB(0, 0, 0);
   let white = sdl2::pixels::Color::RGB(255, 255, 255);
 
@@ -42,12 +51,11 @@ fn main() {
         }
     }
 
-    let _ = renderer.set_draw_color(black);
-    let _ = renderer.clear();
-    let _ = renderer.set_draw_color(white);
-    // loop through cells and render
-    let _ = renderer.fill_rect(rect);
-    let _ = renderer.present();
+      let _ = renderer.set_draw_color(black);
+      let _ = renderer.clear();
+      let _ = renderer.set_draw_color(white);
+      let _ = renderer.fill_rect(rect);
+      let _ = renderer.present();
   };
 
   loop { main_loop(); }

@@ -6,7 +6,7 @@ pub struct Cell {
 
 impl Cell {
   pub fn new() -> Cell {
-    Cell { col, row, is_dead: false }
+    Cell { col: 0, row: 0, is_dead: false }
   }
 
   pub fn get_position() {
