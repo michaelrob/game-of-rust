@@ -11,16 +11,11 @@ mod cell;
 fn main() {
   let ctx = sdl2::init().unwrap();
   let video_ctx = ctx.video().unwrap();
-  let width = 640;
-  let height = 480;
 
-  let board = board::Board {
-      height: 640,
-      width: 480,
-  };
+  let _board = board::Board::new(640, 480);
 
   let window  = match video_ctx
-      .window("Game of Rust", width, height)
+      .window("Game of Rust", 640, 480)
       .position_centered()
       .opengl()
       .build() {

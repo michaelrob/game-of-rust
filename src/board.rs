@@ -5,13 +5,12 @@ pub struct Board {
 
 impl Board {
     pub fn new(width: usize, height: usize) -> Board {
-        Board { width: width, height: height
-        }
+        Board { width: width, height: height }
     }
 
-    fn build() {
-
-    }
+    // fn build() {
+    //
+    // }
 
     // fn get_cell(&self, position: &Place) -> Option<Cell> {
     // }

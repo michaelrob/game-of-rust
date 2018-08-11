@@ -9,6 +9,6 @@ impl Cell {
     Cell { col: 0, row: 0, is_dead: false }
   }
 
-  pub fn get_position() {
-  }
+  // pub fn get_position() {
+  // }
 }
