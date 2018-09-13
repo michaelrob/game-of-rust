@@ -1,3 +1,6 @@
+use na::{U2, U3, Dynamic, MatrixArray, MatrixVec};
+use typenum::U1000;
+
 pub struct Board {
     pub height: usize,
     pub width: usize,
@@ -8,9 +11,10 @@ impl Board {
         Board { width: width, height: height }
     }
 
-    // fn build() {
-    //
-    // }
+    fn build() {
+        type Matrix2x3f = Matrix<f32, U2, U3, MatrixArray<f32, U2, U3>>;
+        let b = Matrix2x3::from_fn(|r, c| (r + 1) as f32 + (c + 1) as f32 / 10.0);
+    }
 
     // fn get_cell(&self, position: &Place) -> Option<Cell> {
     // }
