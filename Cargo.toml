@@ -8,4 +8,4 @@ name = "game_of_rust"
 
 [dependencies]
 sdl2 = "0.31.0"
-nalgebra = "0.15.3"
+nalgebra = "0.16.0"

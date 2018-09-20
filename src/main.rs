@@ -1,4 +1,5 @@
 extern crate sdl2;
+extern crate nalgebra as na;
 
 use std::process;
 use sdl2::rect::{Rect};
